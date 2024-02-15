@@ -24,7 +24,7 @@ app.use(express.urlencoded({
   limit: "50mb"
 }));
 
-// (async() => {
+(async() => {
   
   /**
    * Setup whatsapp-web
@@ -275,4 +275,4 @@ app.use(express.urlencoded({
       console.log('App running on *: ' + port);
   });
 
-// })();
+})();
