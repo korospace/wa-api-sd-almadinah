@@ -13,7 +13,7 @@ const http      = require('http');
 /**
  * Create server
  */
-const port   = 4000;
+const port   = process.env.PORT || 9999;
 const app    = express();
 const server = http.createServer(app);
 const io     = socketIO(server);
@@ -276,23 +276,3 @@ app.use(express.urlencoded({
   });
 
 // })();
-
-// const express = require('express')
-
-// const app = express()
-// const PORT = 4000
-
-// app.listen(PORT, () => {
-//   console.log(`API listening on PORT ${PORT} `)
-// })
-
-// app.get('/', (req, res) => {
-//   res.send('Hey this is my API running ?')
-// })
-
-// app.get('/about', (req, res) => {
-//   res.send('This is my about route..... ')
-// })
-
-// // Export the Express API
-// module.exports = server
